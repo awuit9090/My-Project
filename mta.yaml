@@ -1,0 +1,12 @@
+ID: MyProject
+_schema-version: '2.0'
+version: 0.0.1
+
+modules:
+ - name: HelloWorld
+   type: nodejs
+   path: HelloWorld
+   provides:
+    - name: HelloWorld_api
+      properties:
+         url: ${default-url}
