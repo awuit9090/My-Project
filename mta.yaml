@@ -10,3 +10,16 @@ modules:
     - name: HelloWorld_api
       properties:
          url: ${default-url}
+
+ - name: tinydb
+   type: hdb
+   path: tinyworld/tinydb
+   requires:
+    - name: hdi_tinydb
+
+
+resources:
+ - name: hdi_tinydb
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container
